@@ -6,7 +6,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
-
+ 
   // Load example page and pass in an example by id
   app.get("/reservations", function(req, res) {
     db.Reservation.findAll({}).then(function(dbReservation) {
@@ -17,8 +17,3 @@ module.exports = function(app) {
     });
   });
 };
-//   // Render 404 page for any unmatched routes
-//   app.get("*", function(req, res) {
-//     res.render("404");
-//   });
-// };
