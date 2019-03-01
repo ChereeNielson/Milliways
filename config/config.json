@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Dw2cb25141414!@",
+    "password": "newpassword",
     "database": "project2",
     "host": "localhost",
     "dialect": "mysql"
@@ -16,6 +16,6 @@
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
-    "dialect": "mysql"
+    "dialect": "mysql" 
   }
-}
+  }
