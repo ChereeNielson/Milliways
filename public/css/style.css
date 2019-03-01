@@ -6504,6 +6504,12 @@ button.bg-dark:focus {
 .my-5 {
   margin-bottom: 3rem !important; }
 
+.mb-5 {
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important; }
@@ -8874,9 +8880,13 @@ textarea.form-control {
 .ftco-bg-dark {
   background: #3c312e; }
 
+.copyright {
+  color: #0e0e0e;
+}
+
 .ftco-footer {
   font-size: 14px;
-  background: #141313;
+  background: #0e0e0e;
   padding: 6em 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -8893,7 +8903,7 @@ textarea.form-control {
     width: 100%; }
   .ftco-footer .ftco-footer-widget .thumb a.thumb-menu {
     width: 100%;
-    height: 100px;
+    height: 300px;
     display: block; }
   .ftco-footer .ftco-footer-widget .btn-primary {
     background: #fff !important;
@@ -8904,10 +8914,11 @@ textarea.form-control {
   .ftco-footer p {
     color: rgba(255, 255, 255, 0.7); }
   .ftco-footer a {
-    color: rgba(255, 255, 255, 0.7); }
+    color: #0e0e0e }
     .ftco-footer a:hover {
-      color: #fff; }
+      color: #black; }
   .ftco-footer .ftco-heading-2 {
+    text-align: center;
     font-size: 17px;
     font-weight: 700;
     color: #000000; }
@@ -8998,6 +9009,12 @@ textarea.form-control {
   width: 100px; }
   .media .ftco-icon span {
     color: #f34949; }
+
+#countdown {
+  color: #eee;
+  font-size: 5em;
+  font-family: inherit;
+}
 
 #map {
   width: 100%; }
@@ -9317,6 +9334,14 @@ textarea.form-control {
 
 .comment-form-wrap {
   clear: both; }
+
+  #zarniwoop {
+    color: white;
+  }
+
+  #zarniwoop:hover {
+    color: purple;
+  }
 
 .comment-list {
   padding: 0;
