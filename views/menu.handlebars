@@ -7,18 +7,26 @@
 </style>
 <div class="container">
     <div class="row">
-
-        <ul>
-            {{#each menu}}
-            <li>Name: {{this.name}}</li>
-            <li>Ingredients: {{this.ingredients}}</li>
-            <li>Category: {{this.category}}</li>
-            <li>Price: {{this.price}}</li>
-            <img src="{{this.image}}"> <br>
-            <button id="deleteMenu" data-id="{{this.id}}">Delete</button>
-            {{/each}}
-        </ul>
-
+        {{#each menu}}
+        <div class="col-md-6">
+            {{!-- <div class="container"> --}}
+            <div class="row">
+                <ul class="col-md-6">
+                    <li>Name: {{this.name}}</li>
+                    <li>Ingredients: {{this.ingredients}}</li>
+                    <li>Category: {{this.category}}</li>
+                    <li>Price: {{this.price}}</li>
+                </ul>
+                <div class="col-md-6">
+                    <img src="{{this.image}}">
+                </div>
+            </div>
+            <div class="row">
+                <button class="col-md-12" id="deleteMenu" data-id="{{this.id}}">Delete</button>
+            </div>
+            {{!-- </div> --}}
+        </div>
+        {{/each}}
     </div>
     <div class="row">
         <button class="btn btn-primary mb-4" id="add">Add Menu Item</button>
