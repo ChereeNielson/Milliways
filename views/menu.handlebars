@@ -1,0 +1,50 @@
+<style>
+    img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+
+        <ul>
+            {{#each menu}}
+            <li>Name: {{this.name}}</li>
+            <li>Ingredients: {{this.ingredients}}</li>
+            <li>Category: {{this.category}}</li>
+            <li>Price: {{this.price}}</li>
+            <img src="{{this.image}}"> <br>
+            <button id="deleteMenu" data-id="{{this.id}}">Delete</button>
+            {{/each}}
+        </ul>
+
+    </div>
+    <div class="row">
+        <button class="btn btn-primary mb-4" id="add">Add Menu Item</button>
+        <form id="menu-form">
+            <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="Name">Ingredients</label>
+                <input type="text" class="form-control" id="ingredients">
+            </div>
+            <div class="form-group">
+                <label for="Name">Category</label>
+                <input type="text" class="form-control" id="category">
+            </div>
+            <div class="form-group">
+                <label for="Name">Image</label>
+                <input type="text" class="form-control" id="image">
+            </div>
+            <div class="form-group">
+                <label for="Name">Price</label>
+                <input type="text" class="form-control" id="price">
+            </div>
+
+            <button type="submit" class="btn btn-primary mb-4" id="submit">Add Menu Item</button>
+        </form>
+    </div>
+</div>

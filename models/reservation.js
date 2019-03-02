@@ -14,6 +14,15 @@ module.exports = function(sequelize, DataTypes) {
     phone: {
       type: DataTypes.STRING,
       isNull: false
+    },
+    person: {
+      type: DataTypes.INTEGER,
+      isNull: false
+    },
+    // eslint-disable-next-line camelcase
+    galactic_area: {
+      type: DataTypes.STRING,
+      isNull: false
     }
   });
   return Reservation;

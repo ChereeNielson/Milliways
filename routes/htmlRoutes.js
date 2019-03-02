@@ -16,4 +16,12 @@ module.exports = function(app) {
       res.render("index", hbsobject);
     });
   });
+  app.get("/menu", function(req, res) {
+    db.Menu.findAll({}).then(function(dbMenu) {
+      var hbsobject = {
+        menu: dbMenu
+      };
+      res.render("menu", hbsobject);
+    });
+  });
 };

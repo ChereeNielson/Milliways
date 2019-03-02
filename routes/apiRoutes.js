@@ -91,6 +91,11 @@ module.exports = function(app) {
       res.json(dbReservation);
     });
   });
+  app.post("/api/menu", function(req, res) {
+    db.Menu.create(req.body).then(function(dbMenu) {
+      res.json(dbMenu);
+    });
+  });
 
   // Delete an example by id
   app.delete("/api/reservations/:id", function(req, res) {
@@ -98,6 +103,11 @@ module.exports = function(app) {
       dbReservation
     ) {
       res.json(dbReservation);
+    });
+  });
+  app.delete("/api/menu/:id", function(req, res) {
+    db.Menu.destroy({ where: { id: req.params.id } }).then(function(dbMenu) {
+      res.json(dbMenu);
     });
   });
 };

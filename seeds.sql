@@ -2,7 +2,7 @@ USE project2;
 INSERT INTO menus(name, ingredients, category, image, price, createdAt, updatedAt)
 VALUES ("Ransack The Universe", "Hemisphere, India, Pale, Ale", "Beer", "images/RansackBeer.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Life On Marzen", "Traditional, German, Style, Lager", "Beer", "images/LifeOnMarzenBeer.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
-("Opus Vert", "India, Pale, Ale", "Beer", "images/OpusBeer.png)", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Opus Vert", "India, Pale, Ale", "Beer", "images/OpusBeer.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Tropical Galaxy", "Sour, Farmhouse, Ale", "Beer", "images/TropicalGalaxyBeer.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Galaxy Ghost", "Double, India, Pale, Ale", "Beer", "images/GalaxyGhostBeer.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Dark Matter Merlot", "Darkness, Grapes, Matter", "Wine", "images/Merlot.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
