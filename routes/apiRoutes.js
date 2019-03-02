@@ -55,7 +55,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/examples", function(req, res) {
+  app.get("/api/reservations", function(req, res) {
     db.Reservation.findAll({}).then(function(dbReservation) {
       res.json(dbReservation);
     });
@@ -93,7 +93,7 @@ module.exports = function(app) {
   });
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
+  app.delete("/api/reservations/:id", function(req, res) {
     db.Reservation.destroy({ where: { id: req.params.id } }).then(function(
       dbReservation
     ) {
