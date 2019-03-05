@@ -4,12 +4,39 @@
         width: 150px;
         border-radius: 50%;
     }
+
+    ul {
+        list-style: none;
+    }
+
+    .card {
+        border: none;
+    }
 </style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/menu">Menu <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/reservations">Reservations</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link" id="add" data-target="#match-modal" data-toggle="modal">Add
+                    Menu Item</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         {{#each menu}}
-        <div class="col-md-6">
-            {{!-- <div class="container"> --}}
+        <div class="col-md-6 card mb-2">
             <div class="row">
                 <ul class="col-md-6">
                     <li>Name: {{this.name}}</li>
@@ -22,37 +49,61 @@
                 </div>
             </div>
             <div class="row">
-                <button class="col-md-12" id="deleteMenu" data-id="{{this.id}}">Delete</button>
+                <button class="col-md-4 btn btn-danger" id="deleteMenu" data-id="{{this.id}}">Delete</button>
             </div>
-            {{!-- </div> --}}
         </div>
         {{/each}}
     </div>
-    <div class="row">
-        <button class="btn btn-primary mb-4" id="add">Add Menu Item</button>
-        <form id="menu-form">
-            <div class="form-group">
-                <label for="Name">Name</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="form-group">
-                <label for="Name">Ingredients</label>
-                <input type="text" class="form-control" id="ingredients">
-            </div>
-            <div class="form-group">
-                <label for="Name">Category</label>
-                <input type="text" class="form-control" id="category">
-            </div>
-            <div class="form-group">
-                <label for="Name">Image</label>
-                <input type="text" class="form-control" id="image">
-            </div>
-            <div class="form-group">
-                <label for="Name">Price</label>
-                <input type="text" class="form-control" id="price">
-            </div>
 
-            <button type="submit" class="btn btn-primary mb-4" id="submit">Add Menu Item</button>
-        </form>
+</div>
+<div class="modal fade" id="match-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="menu-form">
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Ingredients</label>
+                        <input type="text" class="form-control" id="ingredients">
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Category</label>
+                        {{!-- <input type="text" class="form-control" id="category"> --}}
+                        <select class="form-control">
+                            <option value="Beer">Beer</option>
+                            <option value="Wine">Wine</option>
+                            <option value="Elixir">Elixir</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Image</label>
+                        <input type="text" class="form-control" id="image">
+                    </div>
+                    <div class="form-group">
+                        <label for="Name">Price</label>
+                        <input type="text" class="form-control" id="price">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mb-4" id="submit">Add Menu Item</button>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
