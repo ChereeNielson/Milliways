@@ -23,3 +23,28 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
+
+// reservation functionality
+
+$("#newReservation").click(function() {
+  event.preventDefault();
+  //grabbing user input from form on reservation.html page
+  var newReservation = {
+    formName: $("#name").val(),
+    formEmail: $("#email").val(),
+    formPhone: $("#phone").val(),
+    formDate: $("#date").val(),
+    formPeople: $("#people").val()
+  }
+  $.ajax({
+    url: "api/reservations",
+    method: "POST",
+    data: newReservation
+  })
+  .then(function(res, req) {
+    alert("Your reservation has been entered!");
+  })
+
+}) 
