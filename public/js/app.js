@@ -57,4 +57,33 @@ $(document).ready(function() {
       });
     }
   });
+  $(".order_items").hide();
+  $("#enter_table").on("click", function() {
+    event.preventDefault();
+    getMenu();
+    var newTable = {
+      // eslint-disable-next-line camelcase
+      table_number: $("#table_num").val()
+    };
+    $.post("/api/tables", newTable, function() {
+      console.log("Post sent");
+    });
+
+    $(".select_table").hide();
+    $(".order_items").show();
+  });
+  function getMenu() {
+    $.ajax({
+      url: "/api/menu",
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      for (var i = 0; i < response.length; i++) {
+        var opt = $("<option>");
+        opt.attr("value", response[i].name);
+        opt.text(response[i].name);
+        $(".custom-select").append(opt);
+      }
+    });
+  }
 });
