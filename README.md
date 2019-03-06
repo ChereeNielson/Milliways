@@ -21,6 +21,9 @@ Ladies and gentlemen, the Universe as we know it has now been in existence for o
 ## YOUR MILLIWAYS RESERVATION
 Click here for your [Milliways](https://bootcampmilliways.herokuapp.com/) reservation at the End of the Universe.
 
+## YOUR MILLIWAYS MANAGER VIEW
+Click here for your [Milliways Manager View](https://bootcampmilliways.herokuapp.com/menu)
+
 <p align="center">
 <img align="center" src="/public/images/DontPanic.png" width="100%"/>
 </p>
