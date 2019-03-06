@@ -48,3 +48,33 @@ $("#newReservation").click(function() {
   })
 
 }) 
+
+// image of the day API call
+
+$.ajax({
+  url: "api/nasa/images",
+  method: "GET"
+})
+.then(function(res, req) {
+
+})
+
+// how many people are in space
+
+$.ajax({
+  url: "api/nasa/people",
+  method: "GET"
+})
+.then(function(res, req) {
+
+})
+
+// near earth objects
+
+$.ajax({
+  url: "api/nasa/asteroids",
+  method: "GET"
+})
+.then(function(res, req) {
+
+})
