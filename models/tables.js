@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
   var Tables = sequelize.define("Tables", {
-    table_number: DataTypes.STRING,
+    table_number: DataTypes.INTEGER,
     status: {
       type: DataTypes.BOOLEAN,
       defaultValue: true

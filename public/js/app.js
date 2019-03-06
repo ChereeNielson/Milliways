@@ -67,10 +67,24 @@ $(document).ready(function() {
     };
     $.post("/api/tables", newTable, function() {
       console.log("Post sent");
+    }).then(function(res) {
+      console.log(res);
+      $(".custom-select").attr("data-tableid", res.id);
     });
 
     $(".select_table").hide();
     $(".order_items").show();
+  });
+  $(".add_item").on("click", function() {
+    event.preventDefault();
+    var newOrder = {
+      // eslint-disable-next-line camelcase
+      item_ordered: $(".custom-select").val(),
+      TableId: $(".custom-select").attr("data-tableid")
+    };
+    $.post("/api/orders", newOrder, function() {
+      console.log("Post sent");
+    });
   });
   function getMenu() {
     $.ajax({
