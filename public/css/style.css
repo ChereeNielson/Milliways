@@ -62,13 +62,7 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
-  @font-face {
-    font-family: "beautysc";
-    src: url("./fonts/beautysc.ttf") format("truetype");
-  }
-  
   a.navbar-brand {
-    font-family: "beautysc" !important;
     font-size: 3rem;
   }
 
