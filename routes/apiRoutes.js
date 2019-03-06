@@ -98,14 +98,10 @@ module.exports = function(app) {
       res.json(dbReservation);
     });
   });
+
   app.post("/api/menu", function(req, res) {
     db.Menu.create(req.body).then(function(dbMenu) {
       res.json(dbMenu);
-    });
-  });
-  app.post("/api/tables", function(req, res) {
-    db.Tables.create(req.body).then(function(dbTables) {
-      res.json(dbTables);
     });
   });
 
