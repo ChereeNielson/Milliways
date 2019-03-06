@@ -32,11 +32,11 @@ $("#newReservation").click(function() {
   event.preventDefault();
   //grabbing user input from form on reservation.html page
   var newReservation = {
-    formName: $("#name").val(),
-    formEmail: $("#email").val(),
-    formPhone: $("#phone").val(),
-    formDate: $("#date").val(),
-    formPeople: $("#people").val()
+    name: $("#name").val(),
+    email: $("#email").val(),
+    phone: $("#phone").val(),
+    galactic_area: $("#date").val(),
+    person: $("#people").val()
   }
   $.ajax({
     url: "api/reservations",
@@ -55,8 +55,10 @@ $.ajax({
   url: "api/nasa/images",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+var pictureOfTheDay = response.url;
+console.log(pictureOfTheDay);
+$("#nasaImage").attr("src", pictureOfTheDay);
 })
 
 // how many people are in space
@@ -65,8 +67,10 @@ $.ajax({
   url: "api/nasa/people",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+  var peopleInSpace = response.number;
+  console.log(peopleInSpace);
+  $("#spacePeople").attr("data-number", peopleInSpace)
 })
 
 // near earth objects
@@ -75,6 +79,8 @@ $.ajax({
   url: "api/nasa/asteroids",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+  var nearbyObjects = response.element_count;
+  console.log(nearbyObjects);
+  $("#earthObjects").attr("data-number", nearbyObjects)
 })

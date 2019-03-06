@@ -31,7 +31,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/nasa/astriods", function(req, res) {
+  app.get("/api/nasa/asteroids", function(req, res) {
     var apiKey = process.env.NASA_API;
     axios
       .get("https://api.nasa.gov/neo/rest/v1/feed?api_key=" + apiKey)
