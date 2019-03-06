@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     ingredients: DataTypes.TEXT,
     category: DataTypes.STRING,
     image: DataTypes.STRING,
-    price: DataTypes.STRING
+    price: DataTypes.INTEGER
   });
   return Menu;
 };
