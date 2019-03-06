@@ -32,11 +32,11 @@ $("#newReservation").click(function() {
   event.preventDefault();
   //grabbing user input from form on reservation.html page
   var newReservation = {
-    formName: $("#name").val(),
-    formEmail: $("#email").val(),
-    formPhone: $("#phone").val(),
-    formDate: $("#date").val(),
-    formPeople: $("#people").val()
+    name: $("#name").val(),
+    email: $("#email").val(),
+    phone: $("#phone").val(),
+    galactic_area: $("#date").val(),
+    person: $("#people").val()
   }
   $.ajax({
     url: "api/reservations",
@@ -58,7 +58,7 @@ $.ajax({
 .then(function(response) {
 var pictureOfTheDay = response.url;
 console.log(pictureOfTheDay);
-
+$("#nasaImage").attr("src", pictureOfTheDay);
 })
 
 // how many people are in space
