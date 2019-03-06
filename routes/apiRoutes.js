@@ -1,9 +1,11 @@
 var db = require("../models");
 var axios = require("axios");
 require("dotenv").config();
+var cors = require("cors");
 module.exports = function(app) {
   // Get all examples
 
+  app.options("*", cors());
   app.get("/api/nasa/people", function(req, res) {
     axios
       .get("http://api.open-notify.org/astros.json")
@@ -29,7 +31,7 @@ module.exports = function(app) {
       });
   });
 
-  app.get("/api/nasa/astroids", function(req, res) {
+  app.get("/api/nasa/asteroids", function(req, res) {
     var apiKey = process.env.NASA_API;
     axios
       .get("https://api.nasa.gov/neo/rest/v1/feed?api_key=" + apiKey)
