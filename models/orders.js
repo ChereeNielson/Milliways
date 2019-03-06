@@ -1,10 +1,11 @@
 /* eslint-disable camelcase */
 module.exports = function(sequelize, DataTypes) {
   var Orders = sequelize.define("Orders", {
-    name: DataTypes.STRING,
     item_ordered: DataTypes.STRING,
-    price: DataTypes.INTEGER,
-    status: DataTypes.BOOLEAN
+    status: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: 0
+    }
   });
   Orders.associate = function(models) {
     // We're saying that a Post should belong to an Author
