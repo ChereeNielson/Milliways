@@ -85,6 +85,11 @@ module.exports = function(app) {
         console.log(error);
       });
   });
+  app.get("/api/menu", function(req, res) {
+    db.Menu.findAll({}).then(function(dbMenu) {
+      res.json(dbMenu);
+    });
+  });
   // Create a new example
   app.post("/api/reservations", function(req, res) {
     db.Reservation.create(req.body).then(function(dbReservation) {
@@ -94,6 +99,11 @@ module.exports = function(app) {
   app.post("/api/menu", function(req, res) {
     db.Menu.create(req.body).then(function(dbMenu) {
       res.json(dbMenu);
+    });
+  });
+  app.post("/api/tables", function(req, res) {
+    db.Tables.create(req.body).then(function(dbTables) {
+      res.json(dbTables);
     });
   });
 
