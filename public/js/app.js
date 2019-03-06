@@ -78,7 +78,7 @@ $(document).ready(function() {
       method: "GET"
     }).then(function(response) {
       console.log(response);
-      for (var i = 0; i < response.length; i++) {
+      for (var i = 0; i < response.length; i++) 
         var opt = $("<option>");
         opt.attr("value", response[i].name);
         opt.text(response[i].name);
