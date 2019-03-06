@@ -55,8 +55,9 @@ $.ajax({
   url: "api/nasa/images",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+console.log(response.url);
+var pictureOfTheDay = response.url;
 })
 
 // how many people are in space
@@ -65,8 +66,9 @@ $.ajax({
   url: "api/nasa/people",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+  console.log(response.number);
+  var peopleInSpace = response.number;
 })
 
 // near earth objects
@@ -75,6 +77,6 @@ $.ajax({
   url: "api/nasa/asteroids",
   method: "GET"
 })
-.then(function(res, req) {
-
+.then(function(response) {
+  console.log(response);
 })
