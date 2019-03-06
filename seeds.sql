@@ -14,4 +14,11 @@ VALUES ("Ransack The Universe", "Hemisphere, India, Pale, Ale", "Beer", "images/
 ("Solar Flare", "Vodka, Orange, Grapefruit, Juice", "Elixir", "images/SolarFlare.jpg", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Gargle Blaster", "Gin, Vodka, Lemon, Unicorn Tears", "Elixir", "images/GargleBlaster2.jpg", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
 ("Space Capsule", "Whiskey, Pampero, Amaro, Liqueur", "Elixir", "images/SpaceCapsule.png", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
-("Alien Secrection", "Vodka, Rum, Midori, Green Liqueur", "Elixir", "images/AlienShooter.jpg", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40");
+("Alien Secrection", "Vodka, Rum, Midori, Green Liqueur", "Elixir", "images/AlienShooter.jpg", "$29","2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Grilled Babel Fish", "Honey-Lemon Sauce, Rice Pilaf, Lemon-Tahini Salad with Lentils", "Lunch", "images/BabelFish.jpg", "$29", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Vegan Rhino Cutlet", "Peace Offering Peas, Double-Edged Potatoes, Evil Smells", "Lunch",  "images/lunch-7.jpg", "$29", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Hagro Biscuits", "Blue Bread, Green Guacamole Sauce, Space Seasonings", "Lunch", "images/lunch-6.jpg", "$29", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Ameglian Major Cow", "Shoulder Braised, White Wine Sauce, Potatoes, Asparagus", "Dinner", "images/MajorCow.jpg", "42", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Spaced-Out Mousse", "Milk Chocolate, Heavy Cream, Vanilla, Sugar Space Dust", "Dessert", "", "42", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Constellation Cookies", "Butter, Vanilla, Gluten-Free Flour, Sugar Crystals, Space Glitter", "Dessert", "", "42", "2019-02-14 22:23:40","2019-02-14 22:23:40"),
+("Nebula Tea Cake", "Butter, Sugar, Orange Zest, Cointreau, Ground Almonds", "Dessert", "", "42", "2019-02-14 22:23:40","2019-02-14 22:23:40"),

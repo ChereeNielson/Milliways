@@ -56,8 +56,9 @@ $.ajax({
   method: "GET"
 })
 .then(function(response) {
-console.log(response.url);
 var pictureOfTheDay = response.url;
+console.log(pictureOfTheDay);
+
 })
 
 // how many people are in space
@@ -67,8 +68,9 @@ $.ajax({
   method: "GET"
 })
 .then(function(response) {
-  console.log(response.number);
   var peopleInSpace = response.number;
+  console.log(peopleInSpace);
+  $("#spacePeople").attr("data-number", peopleInSpace)
 })
 
 // near earth objects
@@ -78,5 +80,7 @@ $.ajax({
   method: "GET"
 })
 .then(function(response) {
-  console.log(response);
+  var nearbyObjects = response.element_count;
+  console.log(nearbyObjects);
+  $("#earthObjects").attr("data-number", nearbyObjects)
 })

@@ -13,7 +13,7 @@ module.exports = function(app) {
       var hbsobject = {
         reservations: dbReservation
       };
-      res.render("index", hbsobject);
+      res.render("reservation", hbsobject);
     });
   });
   app.get("/menu", function(req, res) {
@@ -23,5 +23,8 @@ module.exports = function(app) {
       };
       res.render("menu", hbsobject);
     });
+  });
+  app.get("/order", function(req, res) {
+    res.render("order");
   });
 };
