@@ -61,15 +61,29 @@ $(document).ready(function() {
   $("#enter_table").on("click", function() {
     event.preventDefault();
     getMenu();
+    var tableNumber = $("#table_num").val();
     var newTable = {
       // eslint-disable-next-line camelcase
-      table_number: $("#table_num").val()
+      table_number: tableNumber
     };
-    $.post("/api/tables", newTable, function() {
-      console.log("Post sent");
-    }).then(function(res) {
-      console.log(res);
-      $(".custom-select").attr("data-tableid", res.id);
+    $.ajax({
+      // eslint-disable-next-line camelcase
+      url: "/api/tables/" + tableNumber,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      if (response.length === 0) {
+        $.post("/api/tables", newTable, function() {
+          console.log("Post sent");
+        }).then(function(res) {
+          $(".custom-select").attr("data-tableid", res.id);
+          $(".custom-select").attr("data-tablenumber", res.table_number);
+        });
+      } else {
+        $(".custom-select").attr("data-tableid", response[0].id);
+        $(".custom-select").attr("data-tablenumber", tableNumber);
+        getTableOrders();
+      }
     });
 
     $(".select_table").hide();
@@ -82,8 +96,9 @@ $(document).ready(function() {
       item_ordered: $(".custom-select").val(),
       TableId: $(".custom-select").attr("data-tableid")
     };
-    $.post("/api/orders", newOrder, function() {
-      console.log("Post sent");
+    $.post("/api/orders", newOrder, function(response) {
+      console.log(response);
+      getTableOrders();
     });
   });
   function getMenu() {
@@ -97,6 +112,20 @@ $(document).ready(function() {
         opt.attr("value", response[i].name);
         opt.text(response[i].name);
         $(".custom-select").append(opt);
+      }
+    });
+  }
+  function getTableOrders() {
+    $.ajax({
+      url: "/api/orders/" + $(".custom-select").attr("data-tableid"),
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      $("#tableOrders").empty();
+      for (var i = 0; i < response.length; i++) {
+        var li = $("<li>");
+        li.text(response[i].item_ordered);
+        $("#tableOrders").append(li);
       }
     });
   }
