@@ -33,7 +33,7 @@ Protect me from knowing what I don’t need to know. Protect me from even knowin
 
 ## CREDITS
 
- - [Cheree Nielson](https://github.com/ChereeNielson): QA – [Front End Design, README, and Team Coding](https://github.com/ChereeNielson/Project2/tree/chereehtml)
- - [Eric Sayer](https://github.com/sayex): Marvin The Paranoid Android – [APIs, Back End, and Team Coding](https://github.com/ChereeNielson/Project2/tree/eric_branch)
- - [John Filiaga](https://github.com/jdfili): Presentation Specialist – [APIs, Back End, Front End, and Team Coding](https://github.com/ChereeNielson/Project2/tree/john_views)
- - [Stan Bakalov](https://github.com/sunnybakalov): Team Lead – [APIs, Back End, and Team Coding](https://github.com/ChereeNielson/Project2/tree/stansNewBranch)
+ - [Cheree Nielson](https://github.com/ChereeNielson): QA – [Front End Design, README, and Team Coding](https://github.com/ChereeNielson/Milliways/tree/chereehtml)
+ - [Eric Sayer](https://github.com/sayex): Marvin The Paranoid Android – [APIs, Back End, and Team Coding](https://github.com/ChereeNielson/Milliways/tree/eric_branch)
+ - [John Filiaga](https://github.com/jdfili): Presentation Specialist – [APIs, Back End, Front End, and Team Coding](https://github.com/ChereeNielson/Milliways/tree/john_views)
+ - [Stan Bakalov](https://github.com/sunnybakalov): Team Lead – [APIs, Back End, and Team Coding](https://github.com/ChereeNielson/Milliways/tree/stansNewBranch)
